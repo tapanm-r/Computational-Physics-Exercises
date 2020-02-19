@@ -1,6 +1,7 @@
 # Simulation of chain Radioactive Decay
 # dN_A / dt = - N_A / tau_A
 # dN_B / dt = N_A / tau_A - N_B / tau_B
+# Both N_A and N_B go down to zero
 
 import numpy as np
 import matplotlib.pyplot as plt

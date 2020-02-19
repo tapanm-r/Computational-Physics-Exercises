@@ -10,7 +10,7 @@ def func(v, t, a, b):
     return a - b * v
 
 # Euler Method
-def decay(v0, t0, tf, a, b, dt):
+def freefall(v0, t0, tf, a, b, dt):
     v = []
     v.append(v0)
 
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     plt.plot(t, v0 * np.exp(-b * t) + a * (1 - np.exp(-b * t)) / b, 'k-', label="True Solution")
     
     for dt in [0.05, 0.2, 0.5]:
-        v, t = decay(v0, 0, tf, a, b, dt)
+        v, t = freefall(v0, 0, tf, a, b, dt)
         plt.scatter(t, v, s=5, label=f"Time Step = {dt}")
 
     plt.xlabel("time (s)")

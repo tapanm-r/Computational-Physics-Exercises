@@ -9,7 +9,7 @@ def func(v, t, g):
     return -g
 
 # Euler Method
-def decay(v0, t0, tf, g, dt):
+def fall(v0, t0, tf, g, dt):
     v = []
     v.append(v0)
 
@@ -38,7 +38,7 @@ if __name__ == "__main__":
     plt.plot(t, v0 - t * g, 'k-', label="True Solution")
     
     for dt in [0.05, 0.2, 0.5]:
-        v, t = decay(v0, 0, tf, g, dt)
+        v, t = fall(v0, 0, tf, g, dt)
         plt.scatter(t, v, s=5, label=f"Time Step = {dt}")
 
     plt.xlabel("time (s)")

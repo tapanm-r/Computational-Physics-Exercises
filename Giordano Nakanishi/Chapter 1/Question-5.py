@@ -1,6 +1,7 @@
 # Simulation of Simultaneous Radioactive Conversion
 # dN_A / dt = - N_A / tau_A
 # dN_B / dt = N_A / tau_A - N_B / tau_B
+# N_A and N_B approach constant values depending on tau_A and tau_B
 
 import numpy as np
 import matplotlib.pyplot as plt
